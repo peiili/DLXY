@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+	<head>
+		<link href="../css/taner.css" type=" text/css " rel="stylesheet " />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>大力产品VR展示</title>
+		<script type="text/javascript" src="../taner/files/KeyShotVR.js"></script>
+		<script type="text/javascript">
+			var keyshotVR;
+
+			function initKeyShotVR() {
+				var nameOfDiv = "KeyShotVR";
+				var folderName = "../taner"; //图片路径
+				var viewPortWidth = 950;
+				var viewPortHeight = 534;
+				var backgroundColor = "#FFFFFF";
+				var uCount = 50;
+				var vCount = 1;
+				var uWrap = true;
+				var vWrap = false;
+				var uMouseSensitivity = -0.138889;
+				var vMouseSensitivity = 0.0125;
+				var uStartIndex = 25;
+				var vStartIndex = 0;
+				var minZoom = 1;
+				var maxZoom = 2;//图片缩放
+				var rotationDamping = 0.96;
+				var downScaleToBrowser = true;
+				var addDownScaleGUIButton = false;
+				var downloadOnInteraction = false;
+				var imageExtension = "jpg";
+				var showLoading = true;
+				var loadingIcon = "yuanLOGO.png"; // Set to empty string for default icon.
+				var allowFullscreen = true; // Double-click in desktop browsers for fullscreen.
+				var uReverse = false;
+				var vReverse = false;
+				var hotspots = {};
+
+				keyshotVR = new keyshotVR(nameOfDiv, folderName, viewPortWidth, viewPortHeight, backgroundColor, uCount, vCount, uWrap, vWrap, uMouseSensitivity, vMouseSensitivity, uStartIndex, vStartIndex, minZoom, maxZoom, rotationDamping, downScaleToBrowser, addDownScaleGUIButton, downloadOnInteraction, imageExtension, showLoading, loadingIcon, allowFullscreen, uReverse, vReverse, hotspots);
+			}
+
+			window.onload = initKeyShotVR;
+		</script>
+	</head>
+
+	<body oncontextmenu="return false;">
+		<div id="zhengye">
+		<header>
+			<img id="walcome" src="../images/welcome.png" />
+<nav>
+		<a  href="../index.html">首页</a>
+		<a id="jinqi" href="taner.html"style=";">近期项目</a>
+		<a  href="share.html">软件共享</a>
+</nav>	
+		<span id="qq">
+		 <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=dURFREJMRkBETEA1BARbFhoY" style="text-decoration:none;">
+		 	<img src="../images/mail.png"/ title="给站长写信">
+		 </a> &nbsp;&nbsp;&nbsp; 
+		 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1017935195&site=qq&menu=yes">
+		 	<img border="0" src="../images/qq.png" alt="联系站长" title="联系站长"/>
+		 </a> 
+			</span>
+		</header>
+		<div id="KeyShotVR">
+		</div>
+		<div style="padding-top:20px;">
+			<p>3d鼠标拖动图片360°旋转动画效果</p></div>
+	</div>
+	</body>
+</html>

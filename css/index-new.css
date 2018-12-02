@@ -1,0 +1,158 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+em,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+	padding: 0px;
+	margin: 0px;
+	}
+a {
+	text-decoration:none;
+	color:#00263F;
+}
+a:link {
+	color: #0099CC;
+}
+a:hover {
+	color: #FF6600;
+}
+li {
+	list-style: none;
+}
+body {
+	background-image: url(../images/background-01.jpg);
+	background-repeat: repeat;
+	background-attachment:fixed;
+	background-size: 100%;
+	font-family: Poppins;
+    font-size: 12px;
+}
+#mine{
+	width: 960px;
+	margin: 0px auto;
+	background: #ffffff;
+	position: relative;
+}
+
+header {
+	width: 960px;
+	height: 40px;
+	border: 0px dotted blue;
+	margin: 0 auto;
+	border-bottom: 4px solid red;
+
+	}
+#logo{
+	margin-top: 0;
+	display: inline-block;
+	line-height: 0px;
+}
+#logo a {
+	width: 40px;
+	height: 40px;
+	background:   url(../images/dllogo.jpg);
+	background-size: 100% 100%;
+	display: inline-block;
+	margin-left: 10px;
+}
+#qq {
+	float: right;
+	margin: 10px 20px 0 0;
+}	
+nav{
+	height: 30px;
+	position: absolute;
+	margin-left: 300px;
+	list-style: none;
+	border: 0px dotted red;
+	padding-top: 10px;
+}
+nav a{
+	text-decoration: none;/*字体装饰*/
+	margin:10px 15px 0px 15px;
+	padding: 3px;
+	padding-bottom:10px;
+	color: #000000;
+	}
+#index{
+	background-color: red;
+	color: white;
+}
+
+#banner{
+		height: 480px;
+}
+#banner-left {
+	float: left;
+	width: 720px;
+	height: 450px;
+	margin: 10px 5px 10px 5px;
+	background-color: #1E90FF;
+}
+
+.banner-right {
+	float: right;
+	width: 220px;
+	height: 217.5px;
+	margin: 10px 5px 0px 5px;
+	background-color: #1E90FF;
+}
+footer{
+	margin: 20px auto;
+	width: 960px;
+	text-align: center;
+	border: 0px red dotted;
+	
+}
+
+#jinqi{
+	 overflow: hidden;
+        width: 950px;
+        height: 250px;
+        position: relative;
+        margin:0 auto;
+}
+#jinqi ul{
+	    margin: 0 16px;
+	    padding: 0 0;
+	    border: 0px dotted red;
+	    position: absolute;
+        left: 0;
+        top: 0;
+}
+#jinqi ul li{
+	    float: left;	
+        list-style: none;
+        
+      }
+
+
+#jinqi img{
+		 width:290px;
+		 height:200px;
+		 background-color:#C0C0C0;		 
+		 margin-bottom: 50px;
+		 }
+

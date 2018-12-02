@@ -1,0 +1,52 @@
+@font-face{
+          font-family:"·½ÕýÀ¼Í¤ºÚ_GBK";
+src:url("font/·½ÕýÀ¼Í¤ºÚ_GBK.ttf")
+}
+body{
+     width:  720px; 
+     padding:10px 10px 10px 10px;
+     font-family:"·½ÕýÀ¼Í¤ºÚ_GBK",Arial,sans-serif;
+     font-size:36px;
+     text-align:left;
+     border:0px dotted black;
+     background-image:url(images/jinmao-mobile.JPG);
+     background-size:100%;
+     color:#ffffff;
+     }
+h1{
+   font-size:200%;
+}
+
+h3{
+   font-size:150%;
+   font-weight:normal;
+}	
+ul.hf{                    /*ºá·ù*/
+     height:40px;
+     overflow: hidden;
+     position:relative;
+      }
+     
+*{                       /*ÂÖ»»Í¼Æ¬*/
+     margin:0;
+     padding:0;
+   }
+div.gd{
+     width: 720px;
+     height:450px;
+     overflow: hidden;
+     position:relative;
+     
+     margin:0 auto;
+   }
+ul.gd{
+     position:relative;
+     left:0;
+     top:0;
+    }
+li.gd{
+     width: 720px;
+     height: 450px;
+     float: left; 
+    }
+}

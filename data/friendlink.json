@@ -1,0 +1,11 @@
+{
+    "friendLink": [
+        {"name":"百度一下","link":"https://www.baidu.com"},
+        {"name":"万网","link":"https://wanwang.aliyun.com/"},
+        {"name":"Segmentfault","link":"www.segmentfault.com"},
+        {"name":"CSDN","link":"http://www.csdn.com"},
+        {"name":"站酷","link":"https://www.zcool.com.cn/.com"},
+        {"name":"Githun","link":"https://www.github.com"},
+        {"name":"JS1K", "link":"https://www.JS1K.com"}
+    ]
+}

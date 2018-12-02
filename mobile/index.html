@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <title>智能运势</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        i,
+        em {
+            font-style: normal;
+            line-height: 1.5em;
+        }
+
+        body {
+            font: 16px/100% '微软雅黑';
+            background: url('images/timg.jpg');
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+
+        header {
+            height: 50px;
+            background: linear-gradient(to right, #41FFFF, #43b8fe);
+            text-align: center;
+            line-height: 50px;
+            color: #ffffff;
+        }
+
+        #main {
+            width: 100%;
+            /* background: #ff80c0; */
+        }
+
+        #input {
+
+            width: 80%;
+            height: 40px;
+            border: 0;
+            outline: none;
+            display: block;
+            margin: 100px auto 0;
+            border-radius: 10px;
+            padding-left: 5px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        #btn {
+            width: 30%;
+            display: block;
+            height: 30px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, .7);
+            margin: 30px auto 30px;
+            border: 0px;
+        }
+
+        .content {
+            display: block;
+            background: rgba(255, 255, 255, 0.8);
+            width: 90%;
+            margin: 5px auto;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .content i {
+            padding-left: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>你信吗....?</h3>
+    </header>
+    <div id='main'>
+        <input type="text" id="input" placeholder="请输入11为手机号">
+        <input type="submit" value="掐指一算" id="btn">
+
+    </div>
+
+
+    <div id="content">
+        <span class="content">
+            手机号:
+            <br/>
+            <i></i>
+        </span>
+        <span class="content">
+            归属地:
+            <br/>
+            <i></i>
+        </span>
+        <span class="content">
+            运营商:
+            <br/>
+            <i></i>
+        </span>
+        <span class="content">
+            号码得分:
+            <br/>
+            <i></i>
+        </span>
+        <span class="content">
+            吉凶论断:
+            <br/>
+            <i></i>
+        </span>
+        <span class="content">
+            短语:
+            <br/>
+            <i></i>
+        </span>
+        <span class="content">
+            性格分析:
+            <br/>
+            <i></i>
+        </span>
+        <span class="content">
+            分析详情:
+            <br/>
+            <i></i>
+        </span>
+
+    </div>
+
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    //找到输入框;
+    var input = document.getElementById('input');
+    //获取文本显示框;
+    var textList = document.getElementsByTagName('i');
+
+
+
+    //设置点击事件
+    document.getElementById('btn').onclick = function () {
+        //构建请求对象,
+
+        $.ajax({
+            type: "get",
+            url: 'http://api.jisuapi.com/mobileluck/query?appkey=94c543ddb1a37c93&mobile=' + input.value,
+            dataType: "JSONP",
+            success: function (obj) {
+
+                textList[0].innerHTML = obj.result.mobile;
+                textList[1].innerHTML = obj.result.province + "  " + obj.result.city;
+                textList[2].innerHTML = obj.result.company;
+                if (input.value == "18317771711" || input.value == "18290103996") {
+                    textList[3].innerHTML = 100;
+                } else {
+                    textList[3].innerHTML = obj.result.score;
+                }
+                if (input.value == '18290103996') {
+                    textList[4].innerHTML = '大吉';
+                } else {
+                    textList[4].innerHTML = obj.result.luck;
+                }
+                if (input.value == '18290103996') {
+                    textList[5].innerHTML = '没什么好说的啦,大吉大利';
+                } else {
+                    textList[5].innerHTML = obj.result.content;
+                }
+
+                textList[6].innerHTML = obj.result.character;
+                textList[7].innerHTML = obj.result.characterdetail;
+            }
+        });
+//提交查询记录到后台
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', 'upLoad.php?num=' + input.value);
+        xhr.send();
+        xhr.onload = function () {
+            var str = xhr.responseText;
+        }
+
+    }
+
+
+</script>

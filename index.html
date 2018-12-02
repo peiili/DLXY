@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>大力设计坊</title>
+	<meta charset="utf-8">
+	<meta name="baidu-site-verification" content="7dYRC8kitT" />
+	<meta name="360-site-verification" content="e41240993ddaf6cbcdd91b4416d73373" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="web H5 前端 摄影 网页 大力设计坊 dlsj">
+	<meta name="description" content="大力设计坊作为一个多面手网站，在这里可以得到设计案例，摄影作品，设计辅助软件等，还可以与各位网友一起交流自己在摄影，设计，网站建设方面的心得。">
+
+	<!--网站图标-->
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- 首页样式 -->
+	<link rel="stylesheet" href="css/index.css">
+	<!-- banner轮播图样式 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.0/css/swiper.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/swiperbanner.css">
+	<!-- 导入jquery -->
+</head>
+
+<body>
+	<header class="w">
+		<h1 id='logo'>
+			<a href="www.dlsjf.top"></a>
+		</h1>
+		<span id="welcome">欢迎来到大力设计坊</span>
+		<!-- 导航 -->
+		<ul id='nav'>
+			<li>
+				<a href="">
+					首页
+				</a>
+			</li>
+			<li>
+				<a href="./mobile/">
+					近期项目
+				</a>
+			</li>
+			<li>
+				<a href="http://blog.dlsjf.top">
+					个人博客
+				</a>
+			</li>
+			
+		</ul>
+		<!-- //客服 -->
+		<a class="mail" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=dURFREJMRkBETEA1BARbFhoY" target="_blank" title="联系站长"></a>
+		<a class="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1017935195&site=qq&menu=yes" target="_blank" title="联系站长"></a>
+	</header>
+	<!-- 头部结束 -->
+	<div class="main w fixclear">
+		<div class="banner swiper-container" id="banner1">
+			<!--轮播图大小720*405-->
+			<div class="swiper-wrapper">
+				<img src="./images/banner/1.jpg" alt="" class="swiper-slide">
+				<img src="./images/banner/2.jpg" alt="" class="swiper-slide">
+				<img src="./images/banner/3.jpg" alt="" class="swiper-slide">
+				<img src="./images/banner/4.jpg" alt="" class="swiper-slide">
+				<img src="./images/banner/5.jpg" alt="" class="swiper-slide">
+			</div>
+			<!-- 添加分页器 -->
+			<div class="swiper-pagination"></div>
+			<!-- 添加控制按钮 -->
+			<!-- <div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div> -->
+		</div>
+		<!-- 右侧小图 -->
+		<div class="banner-right">
+			<a class="taobao" href="https://shop121136095.taobao.com/?spm=a230r.7195193.1997079397.15.M1I3v1" target="_blank" alt="设计店">
+				<img src="./images/sm-logo.png" alt="">
+			</a>
+			<a class="share" href="">
+				<img src="./images/chan.jpg" alt="">
+			</a>
+		</div>
+
+	</div>
+	<!-- 近期项目 -->
+	<div class="pro-title w">
+		<h2>近期项目</h2>
+	</div>
+	<div class="pro-list w">
+		<!-- 产品列表 -->
+		<ul>
+			<li>
+				<a href="">
+					<img src="./images/taner.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="./images/nokia.jpg" alt="">
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="./images/xiaomutong.jpg" alt="">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 友情链接 -->
+	<div class="bottom w">
+		<ul>
+			<!-- 使用模板 -->
+			<script type="text/html" id="firendlink">
+				<li>
+					友情链接：
+				</li>
+				{{each list value}}
+					<li>
+						<a target="-blank" href={{value.link}}>{{value.name}}</a>
+					</li>
+				{{/each}}
+			</script>
+		</ul>
+	</div>
+
+</body>
+
+</html>
+
+<!-- 传入jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- 轮播图js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.1.0/js/swiper.min.js"></script>
+
+<!-- 导入模板引擎 -->
+<script src="lib/template-web.js"></script>
+
+<!-- 主页js -->
+<script type="text/javascript" src="./js/index.js"></script>

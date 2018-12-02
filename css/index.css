@@ -1,0 +1,209 @@
+body,
+div,
+span,
+p,
+i,
+strong,
+em,
+a,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+del,
+img,
+input {
+	margin:0;
+	padding:0;
+}
+
+a {
+	text-decoration:none;
+	color:#000;
+}
+a:hover {
+	color:#f10215;
+}
+img {
+	border:0 none;
+	vertical-align: center;
+}
+
+input {
+	border:0 none;
+	outline: 0 none;
+}
+
+li {
+	list-style:none;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4 {
+	font-weight: normal;
+}
+
+i,
+em {
+	font-style: normal;
+}
+
+body {
+	background:#f6f6f6;
+	font: 14px/100% "微软雅黑";
+}
+/*版心宽度 */
+.w {
+	width: 960px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+.fixclear:after {
+	content:"";
+	display:block;
+	clear:both;
+	height:0 none;
+	visibility:hidden;
+}
+.fixclear {
+	*zoom:1;
+}
+/*样式初始化完成*/
+header {
+	height: 40px;
+	border-bottom: 4px solid #e50014;
+	line-height: 40px;
+	position: relative;
+	background: #fff;
+}
+#logo {
+	margin-left: 4px;
+	display: inline-block;
+}
+#logo a {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background: url(../images/sm-logo.png);
+	background-size: 100%;
+}
+#welcome {
+	font-size: 18px;
+	line-height: 40px;
+	height: 40px;
+	position: absolute;
+}
+#nav{
+	display: inline-block;
+	margin-left: 280px;
+}
+
+#nav li {
+	float: left;
+	margin-left: 25px;
+	font-size: 16px;
+}
+.mail {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background-image: url(../images/mail.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 60px;
+	top: 10px;
+}
+.qq {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	background-image:url(../images/qq.png); 
+	background-repeat: no-repeat;
+	position: absolute;
+	right:15px;
+	top: 10px;
+}
+/*头部结束*/
+.main {
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+
+}
+
+#banner1 {
+	float: left;
+	height: 405px;
+	width: 720px;
+	margin-top: 10px;
+	margin-left: 5px; 
+}
+.banner-right {
+	width: 220px;
+	height: 405px;
+	float: right;
+	margin-top: 10px;
+	margin-right: 5px;
+}
+.taobao {
+	display: block;
+	height: 200px;
+	width: 220px;
+}
+.taobao img {
+	width: 220px;
+}
+.share {
+	display: block;
+	height: 200px;
+	width: 220px;
+}
+/*近期项目*/
+.pro-title {
+	height: 60px;
+	line-height: 60px;
+}
+.pro-title h2 {
+	margin-left: 5px;
+}
+.pro-list{
+	height: 210px;
+}
+.pro-list ul {
+	margin-left: 5px;
+}
+.pro-list ul li{
+	float: left;
+	margin-right: 10px;
+}
+.pro-list ul li:nth-child(3){
+	margin-right: 0px;
+}
+.pro-list ul li img {
+	height: 200px;
+	width: 310px;
+}
+/*友情链接*/
+.bottom ul {
+	overflow: hidden;
+	margin: 0px auto;
+	display: flex;
+	justify-content: center;
+
+}
+.bottom	ul li {
+	float: left;
+	margin-left: 10px;
+	padding-right:10px;
+	border-right:1px solid #ccc;
+}
+.bottom	ul li:nth-child(1){
+	color:#e50014;
+}
