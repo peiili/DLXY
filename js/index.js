@@ -30,3 +30,14 @@ $.get({
         linknav.innerHTML = html
     }
 })
+
+
+// $.get({
+//     url:"./api/friendlink.php",
+//     success:function(obj){
+//         const html = template('firendlink',{list:obj.friendLink})
+//         const linknav = $('.bottom ul')[0]
+//         console.log(obj);
+        
+//     }
+// })
