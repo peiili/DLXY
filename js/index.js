@@ -22,9 +22,10 @@ var swiper = new Swiper('.swiper-container', {
 //异步获取友情链接数据
 
 $.get({
-    url:"./data/friendlink.json",
+    url:"./api/friendlink.php",
     success:function(obj){
-        const html = template('firendlink',{list:obj.friendLink})
+
+        const html = template('firendlink',{list:JSON.parse(obj).friendLink})
         const linknav = $('.bottom ul')[0]
         linknav.innerHTML = html
     }

@@ -6,6 +6,7 @@
         {"name":"CSDN","link":"http://www.csdn.com"},
         {"name":"站酷","link":"https://www.zcool.com.cn/.com"},
         {"name":"Githun","link":"https://www.github.com"},
-        {"name":"JS1K", "link":"https://www.JS1K.com"}
+        {"name":"JS1K", "link":"https://www.JS1K.com"},
+        {"name":"点击复制", "link":"https://clipboardjs.com/"}
     ]
 }
