@@ -6,29 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>小儿科</title>
   <link rel="stylesheet" href="../css/index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="../lib/template-web.js"></script>
   <style>
+    .main {
+      overflow: inherit;
+    }
     .w .jumbotron {
       padding: 50px;
       margin-top:20px;
+      margin-bottom: 15px;
       border-radius: 10px;
     }
-    .main .row {
+    .main .tableRow {
       height: 100px;
-      background-color:#eee;
+      /* border-bottom: 1px solid #ccc; */
+      
     }
-    .main .row .option {
+    .main .tableRow .option1 {
       display: flex;
       padding:10px;
+      height: 100%;
+      background-color:#eee;
+      transition: 500ms all;
+      margin-bottom: 10px;
     }
-    .main .row .option:hover {
-      box-shadow:  0 0 5px #ccc;
+    .main .tableRow .option1:hover {
+      /* box-shadow: 0 0 5px #ccc; */
+      background-color: #F0F8FF;
     }
-    .main .row .option .proPic {
+    .main .tableRow .option1 .proPic {
       flex:4;
+      margin-right:20px;
     }
-    .main .row .option .text {
+    .main .tableRow .option1 .proPic img{
+      width: 80px;
+      height: 80px;
+      margin-left: 20px;
+    }
+    .main .tableRow .option1 .text {
       flex: 6;
     }
   </style>
@@ -41,28 +59,46 @@
       <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
     </div>
     <div class="main w">
-      <div class="row">
-        <span class="col-md-4 option">
+      <div class="tableRow">
+        <span class="col-md-4 option1">
             <span class="proPic">
-
+              <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237665765&di=de1a968b7a51542e8ec7dd5790c1a43f&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F59b4bfdf4768df25d06391c758f65f140f2a24a0.jpg" alt="">
             </span>
             <span class="text">
               <h4 class="title">百度网盘</h4>
               <p class="content">国内首家免费个人网盘</p>
             </span>
         </span>
-        <span class="col-md-4 option">
+        <span class="col-md-4 option1">
             <span class="proPic">
-
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237797492&di=ce1f5d2d91a95908eff8e54a624c2d0b&imgtype=0&src=http%3A%2F%2Fs7.sinaimg.cn%2Fmw690%2F004lDxWVzy76mdo7qJ076%26690" alt="">
             </span>
             <span class="text">
               <h4 class="title">百度网盘</h4>
               <p class="content">国内首家免费个人网盘</p>
             </span>
         </span>
-        <span class="col-md-4 option">
+        <span class="col-md-4 option1">
             <span class="proPic">
-
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237848835&di=46a737b4b954ccf59c3dbd82dd1c41ca&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Flpic%2Fs10419767.jpg" alt="">
+            </span>
+            <span class="text">
+              <h4 class="title">百度网盘</h4>
+              <p class="content">国内首家免费个人网盘</p>
+            </span>
+        </span>
+        <span class="col-md-4 option1">
+            <span class="proPic">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237848835&di=46a737b4b954ccf59c3dbd82dd1c41ca&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Flpic%2Fs10419767.jpg" alt="">
+            </span>
+            <span class="text">
+              <h4 class="title">百度网盘</h4>
+              <p class="content">国内首家免费个人网盘</p>
+            </span>
+        </span>
+        <span class="col-md-4 option1">
+            <span class="proPic">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237848835&di=46a737b4b954ccf59c3dbd82dd1c41ca&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Flpic%2Fs10419767.jpg" alt="">
             </span>
             <span class="text">
               <h4 class="title">百度网盘</h4>
@@ -71,7 +107,32 @@
         </span>
         
       </div>
-    </div>
+
   </div>
 </body>
 </html>
+<script type="text/html" id="SoftwareOption">
+  <span class="col-md-4 option1">
+      <span class="proPic">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237848835&di=46a737b4b954ccf59c3dbd82dd1c41ca&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Flpic%2Fs10419767.jpg" alt="">
+      </span>
+      <span class="text">
+        <h4 class="title">百度网盘</h4>
+        <p class="content">国内首家免费个人网盘</p>
+      </span>
+  </span>
+</script>
+<script>
+  //获取软件列表；
+
+  var getSoftwareList = function(){
+    $.get({
+      url:'http://www.dlsjf.top/api/softWare.php',
+      success:(obj)=>{
+        console.log(obj);
+        
+      }
+    })
+  }
+  getSoftwareList();
+</script>
