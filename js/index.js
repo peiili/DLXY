@@ -1,12 +1,11 @@
 
-//轮播图
+$(function (){
+    //轮播图
 var swiper = new Swiper('.swiper-container', {
     pagination:  {
         el: '.swiper-pagination',
         dynamicBullets: true,
-    },//////////////0
-    // nextButton: '.swiper-button-next',
-    // prevButton: '.swiper-button-prev',2
+    },
     paginationClickable: true,
     spaceBetween: 20,
     centeredSlides: true,
@@ -30,3 +29,4 @@ $.get({
     }
 })
 
+})

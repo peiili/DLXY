@@ -21,9 +21,7 @@
       border-radius: 10px;
     }
     .main .tableRow {
-      height: 100px;
-      /* border-bottom: 1px solid #ccc; */
-      
+      height: 100px;      
     }
     .main .tableRow .option1 {
       display: flex;
@@ -56,81 +54,37 @@
     <div class="jumbotron">
       <h1>小儿科，玩转小儿科技</h1>
       <p>小儿科软件自用平台</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/index.html" role="button">Get more</a></p>
     </div>
     <div class="main w">
-      <div class="tableRow">
-        <span class="col-md-4 option1">
-            <span class="proPic">
-              <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237665765&di=de1a968b7a51542e8ec7dd5790c1a43f&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F59b4bfdf4768df25d06391c758f65f140f2a24a0.jpg" alt="">
-            </span>
-            <span class="text">
-              <h4 class="title">百度网盘</h4>
-              <p class="content">国内首家免费个人网盘</p>
-            </span>
-        </span>
-        <span class="col-md-4 option1">
-            <span class="proPic">
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237797492&di=ce1f5d2d91a95908eff8e54a624c2d0b&imgtype=0&src=http%3A%2F%2Fs7.sinaimg.cn%2Fmw690%2F004lDxWVzy76mdo7qJ076%26690" alt="">
-            </span>
-            <span class="text">
-              <h4 class="title">百度网盘</h4>
-              <p class="content">国内首家免费个人网盘</p>
-            </span>
-        </span>
-        <span class="col-md-4 option1">
-            <span class="proPic">
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237848835&di=46a737b4b954ccf59c3dbd82dd1c41ca&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Flpic%2Fs10419767.jpg" alt="">
-            </span>
-            <span class="text">
-              <h4 class="title">百度网盘</h4>
-              <p class="content">国内首家免费个人网盘</p>
-            </span>
-        </span>
-        <span class="col-md-4 option1">
-            <span class="proPic">
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237848835&di=46a737b4b954ccf59c3dbd82dd1c41ca&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Flpic%2Fs10419767.jpg" alt="">
-            </span>
-            <span class="text">
-              <h4 class="title">百度网盘</h4>
-              <p class="content">国内首家免费个人网盘</p>
-            </span>
-        </span>
-        <span class="col-md-4 option1">
-            <span class="proPic">
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237848835&di=46a737b4b954ccf59c3dbd82dd1c41ca&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Flpic%2Fs10419767.jpg" alt="">
-            </span>
-            <span class="text">
-              <h4 class="title">百度网盘</h4>
-              <p class="content">国内首家免费个人网盘</p>
-            </span>
-        </span>
-        
+      <div class="tableRow" id="tableRowList">
+          <script type="text/html" id="SoftwareOption">
+            {{each list value}}
+            <a href="{{value.link}}">
+              <span class="col-md-4 option1">
+                <span class="proPic">
+                    <img src="{{value.imageurl}}" alt="{{value.name}}" title="{{value.describe}}">
+                </span>
+                <span class="text">
+                  <h4 class="title">{{value.name}}</h4>
+                  <p class="content">{{value.describe}}</p>
+                </span>
+              </span>
+            </a>
+         
+            {{/each}}
+          </script>
       </div>
-
   </div>
 </body>
 </html>
-<script type="text/html" id="SoftwareOption">
-  <span class="col-md-4 option1">
-      <span class="proPic">
-          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552237848835&di=46a737b4b954ccf59c3dbd82dd1c41ca&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Flpic%2Fs10419767.jpg" alt="">
-      </span>
-      <span class="text">
-        <h4 class="title">百度网盘</h4>
-        <p class="content">国内首家免费个人网盘</p>
-      </span>
-  </span>
-</script>
 <script>
-  //获取软件列表；
-
-  var getSoftwareList = function(){
+var getSoftwareList = function(){
     $.get({
-      url:'http://www.dlsjf.top/api/softWare.php',
+      url:'/api/softWare.php',
       success:(obj)=>{
-        console.log(obj);
-        
+       const html = template('SoftwareOption',{list:JSON.parse(obj).sharasoftware});
+        $('#tableRowList').html(html);
       }
     })
   }
